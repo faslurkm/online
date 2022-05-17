@@ -332,11 +332,6 @@ L.Control.NotebookbarImpress = L.Control.NotebookbarWriter.extend({
 				'vertical': 'true'
 			},
 			{
-				'type': 'bigtoolitem',
-				'text': _UNO('.uno:Sidebar'),
-				'command': '.uno:Sidebar'
-			},
-			{
 				'id': 'toggleuimode',
 				'type': 'bigmenubartoolitem',
 				'text': _('Compact view'),
@@ -347,6 +342,42 @@ L.Control.NotebookbarImpress = L.Control.NotebookbarWriter.extend({
 				'type': 'menubartoolitem',
 				'text': _('Status Bar'),
 				'command': _('Show Status Bar')
+			},
+			{
+				'type': 'bigtoolitem',
+				'text': _UNO('.uno:Sidebar'),
+				'command': '.uno:Sidebar'
+			},
+			{
+				'type': 'bigtoolitem',
+				'text': _UNO('.uno:MasterSlidesPanel', 'presentation'),
+				'command': '.uno:MasterSlidesPanel'
+			},
+			{
+				'type': 'container',
+				'children': [
+					{
+						'type': 'toolbox',
+						'children': [
+							{
+								'type': 'toolitem',
+								'text': _UNO('.uno:SlideChangeWindow', 'presentation'),
+								'command': '.uno:SlideChangeWindow'
+							}
+						]
+					},
+					{
+						'type': 'toolbox',
+						'children': [
+							{
+								'type': 'toolitem',
+								'text': _UNO('.uno:CustomAnimation', 'presentation'),
+								'command': '.uno:CustomAnimation'
+							}
+						]
+					}
+				],
+				'vertical': 'true'
 			}
 		];
 
